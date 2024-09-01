@@ -4,11 +4,11 @@ https://t.me/MainPlayCh"""
 
 __scripts__ = []
 import sys
-imported=False
-if sys.platform=="linux":
+imported = False
+if sys.platform == "linux":
   from .linux import *
-  imported=True
+  imported = True
 if not imported:
-  raise RuntimeError("Unsupported platform: %r"%sys.platform)
+  raise RuntimeError("Unsupported platform: %r" % sys.platform)
 del imported
 from ._module_info import version as __version__

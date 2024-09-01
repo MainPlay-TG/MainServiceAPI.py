@@ -1,2 +1,2 @@
-name = "ERROR"
-version = "0.0.0"
+name = "MainServiceAPI"
+version = "0.0.1"
