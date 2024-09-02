@@ -1,6 +1,6 @@
 import os
 import sys
-from ..types import Service
+from ..objects import Service
 from configparser import RawConfigParser
 from MainShortcuts2 import ms
 SERVICES_DIR = "/etc/systemd/system"
