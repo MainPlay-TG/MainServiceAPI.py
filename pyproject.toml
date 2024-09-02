@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "MainServiceAPI"
-version = "0.0.2"
+version = "0.0.3"
 description = "null"
 authors = ["MainPlay TG <xbox.roman6666666666@gmail.com>"]
 readme = "README.md"

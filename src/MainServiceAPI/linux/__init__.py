@@ -113,7 +113,7 @@ def make_wrapper(name: str, args: list[str], *,
   if not stdout is None:
     data["stdout"] = ms.path.path2str(stdout, True)
   filepath = "%s/%s-wrapper.json" % (data_dir, name)
-  ms.json.write(filepath, data)
+  ms.json.write(filepath, {"MainServiceAPI/wrapper": data})
   svc_kw["name"] = name
   svc_kw["cmd"] = [sys.executable, WRAPPER_PATH, filepath]
   return os.path.basename(write(Service(**svc_kw), reload=reload))
