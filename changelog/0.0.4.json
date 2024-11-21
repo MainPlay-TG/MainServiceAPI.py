@@ -1,0 +1,12 @@
+{
+  "version": "0.0.4",
+  "version_id": 4,
+  "fixed": [
+    "Исправлены алиасы в Linux"
+  ],
+  "added": [
+    "Добавлена полддержка Android Termux"
+  ],
+  "changed": [],
+  "removed": []
+}

@@ -42,8 +42,6 @@ def unparse(svc: Service) -> str:
   data["Service"]["ExecStart"] = svc.cmd
   if svc.description:
     data["Unit"]["Description"] = svc.description.replace("\n", "\\n")
-  if svc.name:
-    data["Install"]["Alias"] = svc.name
   if svc.on_boot:
     data["Install"]["WantedBy"] = "multi-user.target"
     data["Unit"]["After"] = "network.target"
@@ -117,3 +115,7 @@ def make_wrapper(name: str, args: list[str], *,
   svc_kw["name"] = name
   svc_kw["cmd"] = [sys.executable, WRAPPER_PATH, filepath]
   return os.path.basename(write(Service(**svc_kw), reload=reload))
+
+
+def from_info(data: dict) -> str:
+  raise Exception()
